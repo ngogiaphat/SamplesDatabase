@@ -1,9 +1,109 @@
-; This file is for unifying the coding style for different editors and IDEs.
-; More information at http://editorconfig.org
+# Version: 4.1.1 (Using https://semver.org/)
+# Updated: 2022-05-23
+# See https://github.com/RehanSaeed/EditorConfig/releases for release notes.
+# See https://github.com/RehanSaeed/EditorConfig for updates to this file.
+# See http://EditorConfig.org for more information about .editorconfig files.
+##########################################
+# Common Settings
+##########################################
+# This file is the top-most EditorConfig file
 root = true
-[*.bat]
+[*]
+indent_size = 4
 end_of_line = crlf
-[*.php]
+indent_style = space
+insert_final_newline = false
+trim_trailing_whitespace = true
+# Matches the exact package files
+[*.{package.json, package-lock.json, yarn.lock, pnpm-lock.yaml, pnpm-workspace.yaml, .eslintrc, eslintrc.js, .eslintignore, .prettierrc, .prettierrc.js, .prettierignore, firebase.json, babel.config.json, edgeware.json, .travis.yml, LICENSE, VERSION}]
+indent_size = 4
+end_of_line = crlf
+indent_style = space
+insert_final_newline = false
+trim_trailing_whitespace = true
+# JSON Files
+[*.{json, json5, jsonc, webmanifest}]
+indent_size = 4
+end_of_line = crlf
+indent_style = space
+trim_trailing_whitespace = true
+# JS files and typechecker files
+[*.{js, cjs, mjs, ejs, ts, cts, mts, jsx, tsx, vue, svelte, astro, gql, graphql}]
+charset = utf-8
+indent_size = 4
+end_of_line = crlf
+indent_style = space
+trim_trailing_whitespace = true
+# Language for Data Science
+[*.{ipynb, nb, py, pyx, pxi, pxd, r, rmd}]
+indent_size = 4
+end_of_line = crlf
+indent_style = space
+trim_trailing_whitespace = true
+# Makeup languages
+[*.{xml, xsl, htm, html, xhtml, cshtml, vbhtml, haml, phtml, jinja, hbs, handlebars}]
+indent_size = 4
+end_of_line = crlf
+indent_style = space
+insert_final_newline = false
+trim_trailing_whitespace = true
+# Styles languages
+[*.{css, scss, sass, less, stylus}]
+indent_size = 4
+end_of_line = crlf
+indent_style = space
+trim_trailing_whitespace = true
+# Object language
+[*.{v, c, cpp, h, hpp, m, cs, pas, nim, rs, go, java, kt, scala, swift, ruby, php, sol, tf, OCaml, mqh, mq4, mq5}]
+indent_size = 4
+end_of_line = crlf
+indent_style = space
+insert_final_newline = false
+trim_trailing_whitespace = true
+# Visual Studio XML Project Files
+[*.{csproj, vbproj, vcxproj.filters, proj, projitems, shproj}]
+indent_size = 4
+end_of_line = crlf
+indent_style = space
+insert_final_newline = false
+trim_trailing_whitespace = true
+# Visual Studio Solution Files
+[*.sln]
+indent_size = 4
+end_of_line = crlf
+indent_style = space
+insert_final_newline = false
+trim_trailing_whitespace = true
+# XML Configuration Files
+[*.{xml, config, props, targets, nuspec, resx, ruleset, vsixmanifest, vsct}]
+indent_size = 4
+end_of_line = crlf
+indent_style = space
+insert_final_newline = false
+trim_trailing_whitespace = true
+# YML, YAML Files
+[*.{yml, yaml}]
+indent_size = 4
+end_of_line = crlf
+indent_style = space
+insert_final_newline = false
+trim_trailing_whitespace = true
+# Markdown Files
+[*.{md, mdx}]
+indent_size = 2
+end_of_line = crlf
+indent_style = space
+insert_final_newline = false
+trim_trailing_whitespace = true
+# Batch Files
+[*.{cmd, bat, sh, Dockerfile, Compose}]
+indent_size = 4
+end_of_line = crlf
+indent_style = space
+insert_final_newline = false
+trim_trailing_whitespace = true
+# Makefiles
+[Makefile]
 indent_size = 4
 end_of_line = crlf
 indent_style = space
